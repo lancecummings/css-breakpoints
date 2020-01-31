@@ -1,0 +1,49 @@
+{
+  "name": "@lancecummings/css-breakpoints",
+  "version": "0.1",
+  "author": "lancecummings <lance@glance.ca>",
+  "license": "MIT",
+  "description": "CSS breakpoints in ReactJS hook",
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks",
+    "css-breakpoints",
+  ],
+  "homepage": "https://github.com/lancecummings/css-breakpoints#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lancecummings/css-breakpoints.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lancecummings/css-breakpoints/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "src/index.jsx",
+  "scripts": {
+    "prepare": "cross-env NODE_ENV=production npm run build",
+    "build": "babel src --out-dir lib --ignore **/__tests__",
+    "watch": "babel -w src --out-dir lib --ignore **/__tests__",
+    "release": "yarn version --patch",
+    "preversion": "changelog -p && git add CHANGELOG.md",
+    "postversion": "cross-var yarn publish --new-version $npm_package_version",
+    "postpublish": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "cross-env": "^6.0.3",
+    "cross-var": "^1.1.0",
+    "generate-changelog": "^1.8.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  },
+  "directories": {
+    "example": "examples"
+  }
+}
