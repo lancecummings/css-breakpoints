@@ -1,6 +1,6 @@
 {
   "name": "@lancecummings/css-breakpoints",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CSS Breakpoints ReactJS hook",
   "author": "lancecummings <lance@glance.ca>",
   "license": "MIT",
