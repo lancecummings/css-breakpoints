@@ -1,20 +1,11 @@
 {
   "name": "@lancecummings/css-breakpoints",
-  "version": "0.1",
+  "version": "1.0.0",
+  "description": "CSS Breakpoints ReactJS hook",
   "author": "lancecummings <lance@glance.ca>",
   "license": "MIT",
-  "description": "CSS breakpoints in ReactJS hook",
-  "keywords": [
-    "react",
-    "hooks",
-    "react-hooks",
-    "css-breakpoints",
-  ],
   "homepage": "https://github.com/lancecummings/css-breakpoints#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lancecummings/css-breakpoints.git"
-  },
+  "repository": "git+https://github.com/lancecummings/css-breakpoints.git",
   "bugs": {
     "url": "https://github.com/lancecummings/css-breakpoints/issues"
   },
@@ -42,8 +33,5 @@
   },
   "peerDependencies": {
     "react": "^16.8.6"
-  },
-  "directories": {
-    "example": "examples"
   }
 }

@@ -5,7 +5,7 @@ import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect'
 const isBrowser = typeof window !== `undefined`
 
 function getBreakpoint() {
-  if (!isBrowser) return { '' }
+  if (!isBrowser) return ''
   return window.getComputedStyle(document.body, ':before').content.replace(/\"/g, '')
 }
 
@@ -38,7 +38,9 @@ export function useCssBreakpoints(effect, deps, wait) {
     window.addEventListener('resize', handleResize)
 
     if (wait) {
-      setTimeout(callBack, wait);
+      if (throttleTimeout === null) {
+        throttleTimeout = setTimeout(callBack, wait);
+      }
     }
  
     return () => window.removeEventListener('resize', handleResize)
